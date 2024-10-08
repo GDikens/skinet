@@ -1,0 +1,13 @@
+using System;
+using core.entities;
+
+namespace core.specifications;
+
+public class TypeListSpecification : BaseSpecification<Product, string>
+{
+    public TypeListSpecification()
+    {
+        AddSelect(x => x.Type);
+        ApplyDistinct();
+    }
+}
